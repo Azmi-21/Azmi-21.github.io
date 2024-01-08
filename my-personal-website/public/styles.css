@@ -1,0 +1,55 @@
+body {
+  background-image: url("/galaxy2.avif");
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 15px;
+  border-radius: 25px;
+  width: 50%;
+  margin: auto;
+}
+
+header button {
+  background-color: #555;
+  color: white;
+  border: none;
+  padding: 20px 40px;
+  cursor: pointer;
+}
+
+header button:hover {
+  background-color: #777;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+.mainComponent {
+  display: flex;
+  flex-direction: column; /* stacks the children vertically */
+  justify-content: center; /* centers the children vertically */
+  align-items: center; /* centers the children horizontally */
+  height: 100%;
+}
+
+.image div {
+  border-radius: 50%; /* makes the div circular */
+  border: 5px solid white; /* adds a thick white border */
+  overflow: hidden; /* hides the parts of the image that fall outside the circular div */
+  width: 200px; /* makes the div smaller */
+  height: 200px; /* makes the div smaller */
+}
+
+.image img {
+  width: 100%; /* makes the image fill the div */
+  height: fit-content; /* maintains the image's aspect ratio */
+}
