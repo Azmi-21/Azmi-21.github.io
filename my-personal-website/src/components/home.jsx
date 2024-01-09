@@ -8,7 +8,7 @@ function Home() {
           <img src="goat.avif" alt="Goat AKA ME" />
         </div>
       </div>
-      <p>
+      <p id="introduction">
         RANDOM RANDOM RANDOM RANDOM RANDOM RANDOM RANDOM RANDOM RANDOM RANDOM
         RANDOM RANDOM RANDOM RANDOM RANDOM RANDOM RANDOM RANDOM RANDOM RANDOM
       </p>

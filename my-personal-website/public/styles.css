@@ -1,36 +1,149 @@
 body {
-  background-image: url("/galaxy2.avif");
-  background-repeat: no-repeat;
-  background-position: center;
   margin: 0;
   padding: 0;
   height: 100vh;
 }
-
 header {
-  background-color: #333;
-  color: white;
-  padding: 15px;
-  border-radius: 25px;
-  width: 50%;
-  margin: auto;
-}
-
-header button {
-  background-color: #555;
-  color: white;
-  border: none;
-  padding: 20px 40px;
-  cursor: pointer;
-}
-
-header button:hover {
-  background-color: #777;
-}
-
-header nav {
+  font-family: "Raleway", sans-serif;
+  height: 20vh;
+  overflow: hidden;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
+  font-weight: 30;
+  position: fixed; /* Added this to make the header stay at the top */
+  width: 100%; /* Added this to make the header span the full width of the page */
+  top: 0; /* Added this to position the header at the top */
+}
+.all {
+  display: flex;
+  perspective: 7.5px; /* Increased perspective */
+  transform: perspective(225px) rotateX(30deg); /* Increased perspective and rotation */
+  will-change: perspective;
+  perspective-origin: center center;
+  transition: all 0.65s ease-out;
+  justify-content: center;
+  transform-style: preserve-3d;
+}
+.all:hover {
+  perspective: 750px; /* Increased perspective */
+  transition: all 0.65s ease-in;
+  transform: perspective(7500px) rotateX(0deg); /* Increased perspective and rotation */
+  .text {
+    opacity: 1;
+  }
+  & > div {
+    opacity: 1;
+    transition-delay: 0s;
+  }
+  .explainer {
+    opacity: 0;
+  }
+}
+
+.left,
+.center,
+.right,
+.lefter,
+.righter {
+  width: 90px; /* Increased width */
+  height: 67.5px; /* Increased height */
+  transform-style: preserve-3d;
+  border-radius: 15px; /* Increased border-radius */
+  border: 3px solid #fff; /* Increased border thickness */
+  box-shadow: 0 0 30px 7.5px rgba(100, 100, 255, 0.4); /* Increased box-shadow */
+  opacity: 0;
+  transition: all 0.15s ease;
+  transition-delay: 0.75s; /* Increased transition delay */
+  position: relative;
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: #58d;
+  cursor: pointer;
+  background-blend-mode: color-burn;
+
+  &:hover {
+    box-shadow: 0 0 45px 15px rgba(100, 100, 255, 0.6); /* Increased box-shadow */
+    background-color: #ccf;
+  }
+}
+
+.lefter {
+  transform: translateX(-45px) translateZ(-37.5px) rotateY(-15deg); /* Increased translation and adjusted rotation */
+  background-image: url("data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20%3F%3E%3Csvg%20baseProfile%3D%22tiny%22%20height%3D%2224px%22%20id%3D%22Layer_1%22%20version%3D%221.2%22%20viewBox%3D%220%200%2024%2024%22%20width%3D%2224px%22%20xml%3Aspace%3D%22preserve%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cpath%20d%3D%22M12%2C3c0%2C0-6.186%2C5.34-9.643%2C8.232C2.154%2C11.416%2C2%2C11.684%2C2%2C12c0%2C0.553%2C0.447%2C1%2C1%2C1h2v7c0%2C0.553%2C0.447%2C1%2C1%2C1h3%20%20c0.553%2C0%2C1-0.448%2C1-1v-4h4v4c0%2C0.552%2C0.447%2C1%2C1%2C1h3c0.553%2C0%2C1-0.447%2C1-1v-7h2c0.553%2C0%2C1-0.447%2C1-1c0-0.316-0.154-0.584-0.383-0.768%20%20C18.184%2C8.34%2C12%2C3%2C12%2C3z%22%2F%3E%3C%2Fsvg%3E");
+  background-size: 50%;
+}
+.left {
+  transform: translateX(-22.5px) translateZ(-18.75px) rotateY(-7.5deg); /* Increased translation and adjusted rotation */
+  background-image: url("data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20%3F%3E%3Csvg%20height%3D%2224%22%20id%3D%22svg8%22%20version%3D%221.1%22%20viewBox%3D%220%200%2024%2024%22%20width%3D%2224%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Acc%3D%22http%3A%2F%2Fcreativecommons.org%2Fns%23%22%20xmlns%3Adc%3D%22http%3A%2F%2Fpurl.org%2Fdc%2Felements%2F1.1%2F%22%20xmlns%3Ardf%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%22%20xmlns%3Asvg%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%20id%3D%22defs2%22%2F%3E%3Cg%20id%3D%22g1347%22%20style%3D%22display%3Ainline%22%20transform%3D%22translate(0%2C-290.65039)%22%3E%3Cpath%20d%3D%22m%2012%2C292.65039%20c%20-5.511%2C0%20-10%2C4.489%20-10%2C10%200%2C5.511%204.489%2C10%2010%2C10%205.511%2C0%2010%2C-4.489%2010%2C-10%200%2C-5.511%20-4.489%2C-10%20-10%2C-10%20z%20m%200%2C2%20c%204.43012%2C0%208%2C3.56988%208%2C8%200%2C4.43012%20-3.56988%2C8%20-8%2C8%20-4.43012%2C0%20-8%2C-3.56988%20-8%2C-8%200%2C-4.43012%203.56988%2C-8%208%2C-8%20z%22%20id%3D%22circle1332%22%20style%3D%22color%3A%23000000%3Bfont-style%3Anormal%3Bfont-variant%3Anormal%3Bfont-weight%3Anormal%3Bfont-stretch%3Anormal%3Bfont-size%3Amedium%3Bline-height%3Anormal%3Bfont-family%3Asans-serif%3Bfont-variant-ligatures%3Anormal%3Bfont-variant-position%3Anormal%3Bfont-variant-caps%3Anormal%3Bfont-variant-numeric%3Anormal%3Bfont-variant-alternates%3Anormal%3Bfont-variant-east-asian%3Anormal%3Bfont-feature-settings%3Anormal%3Bfont-variation-settings%3Anormal%3Btext-indent%3A0%3Btext-align%3Astart%3Btext-decoration%3Anone%3Btext-decoration-line%3Anone%3Btext-decoration-style%3Asolid%3Btext-decoration-color%3A%23000000%3Bletter-spacing%3Anormal%3Bword-spacing%3Anormal%3Btext-transform%3Anone%3Bwriting-mode%3Alr-tb%3Bdirection%3Altr%3Btext-orientation%3Amixed%3Bdominant-baseline%3Aauto%3Bbaseline-shift%3Abaseline%3Btext-anchor%3Astart%3Bwhite-space%3Anormal%3Bshape-padding%3A0%3Bshape-margin%3A0%3Binline-size%3A0%3Bclip-rule%3Anonzero%3Bdisplay%3Ainline%3Boverflow%3Avisible%3Bvisibility%3Avisible%3Bopacity%3A1%3Bisolation%3Aauto%3Bmix-blend-mode%3Anormal%3Bcolor-interpolation%3AsRGB%3Bcolor-interpolation-filters%3AlinearRGB%3Bsolid-color%3A%23000000%3Bsolid-opacity%3A1%3Bvector-effect%3Anone%3Bfill%3A%23000000%3Bfill-opacity%3A1%3Bfill-rule%3Anonzero%3Bstroke%3Anone%3Bstroke-linecap%3Around%3Bstroke-linejoin%3Around%3Bstroke-miterlimit%3A4%3Bstroke-dasharray%3Anone%3Bstroke-dashoffset%3A0%3Bstroke-opacity%3A1%3Bcolor-rendering%3Aauto%3Bimage-rendering%3Aauto%3Bshape-rendering%3Aauto%3Btext-rendering%3Aauto%3Benable-background%3Aaccumulate%3Bstop-color%3A%23000000%3Bstop-opacity%3A1%22%2F%3E%3Cpath%20d%3D%22m%2012%2C299.65039%20a%201%2C1%200%200%200%20-1%2C1%20v%207%20a%201%2C1%200%200%200%201%2C1%201%2C1%200%200%200%201%2C-1%20v%20-7%20a%201%2C1%200%200%200%20-1%2C-1%20z%22%20id%3D%22path1340%22%20style%3D%22color%3A%23000000%3Bfont-style%3Anormal%3Bfont-variant%3Anormal%3Bfont-weight%3Anormal%3Bfont-stretch%3Anormal%3Bfont-size%3Amedium%3Bline-height%3Anormal%3Bfont-family%3Asans-serif%3Bfont-variant-ligatures%3Anormal%3Bfont-variant-position%3Anormal%3Bfont-variant-caps%3Anormal%3Bfont-variant-numeric%3Anormal%3Bfont-variant-alternates%3Anormal%3Bfont-variant-east-asian%3Anormal%3Bfont-feature-settings%3Anormal%3Bfont-variation-settings%3Anormal%3Btext-indent%3A0%3Btext-align%3Astart%3Btext-decoration%3Anone%3Btext-decoration-line%3Anone%3Btext-decoration-style%3Asolid%3Btext-decoration-color%3A%23000000%3Bletter-spacing%3Anormal%3Bword-spacing%3Anormal%3Btext-transform%3Anone%3Bwriting-mode%3Alr-tb%3Bdirection%3Altr%3Btext-orientation%3Amixed%3Bdominant-baseline%3Aauto%3Bbaseline-shift%3Abaseline%3Btext-anchor%3Astart%3Bwhite-space%3Anormal%3Bshape-padding%3A0%3Bshape-margin%3A0%3Binline-size%3A0%3Bclip-rule%3Anonzero%3Bdisplay%3Ainline%3Boverflow%3Avisible%3Bvisibility%3Avisible%3Bopacity%3A1%3Bisolation%3Aauto%3Bmix-blend-mode%3Anormal%3Bcolor-interpolation%3AsRGB%3Bcolor-interpolation-filters%3AlinearRGB%3Bsolid-color%3A%23000000%3Bsolid-opacity%3A1%3Bvector-effect%3Anone%3Bfill%3A%23000000%3Bfill-opacity%3A1%3Bfill-rule%3Anonzero%3Bstroke%3Anone%3Bstroke-linecap%3Around%3Bstroke-linejoin%3Amiter%3Bstroke-miterlimit%3A4%3Bstroke-dasharray%3Anone%3Bstroke-dashoffset%3A0%3Bstroke-opacity%3A1%3Bcolor-rendering%3Aauto%3Bimage-rendering%3Aauto%3Bshape-rendering%3Aauto%3Btext-rendering%3Aauto%3Benable-background%3Aaccumulate%3Bstop-color%3A%23000000%3Bstop-opacity%3A1%22%2F%3E%3Cpath%20d%3D%22m%2013%2C297.64999%20a%201%2C1%200%200%201%20-1%2C1%201%2C1%200%200%201%20-1%2C-1%201%2C1%200%200%201%201%2C-1%201%2C1%200%200%201%201%2C1%20z%22%20id%3D%22path1342%22%20style%3D%22fill%3A%23000000%3Bstroke%3Anone%3Bstroke-width%3A2%3Bstroke-linecap%3Around%3Bstroke-linejoin%3Around%3Bstroke-miterlimit%3A4%3Bstroke-dasharray%3Anone%3Bfill-opacity%3A1%3Bopacity%3A1%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+  background-size: 50%;
+}
+.center {
+  opacity: 1;
+  background-image: url(data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20%3F%3E%3Csvg%20enable-background%3D%22new%200%200%2032%2032%22%20id%3D%22Stock_cut%22%20version%3D%221.1%22%20viewBox%3D%220%200%2032%2032%22%20xml%3Aspace%3D%22preserve%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cdesc%2F%3E%3Cg%3E%3Cpath%20d%3D%22M17%2C31h-2%20%20%20c-1.105%2C0-2-0.895-2-2v-2h6v2C19%2C30.105%2C18.105%2C31%2C17%2C31z%22%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20stroke-linejoin%3D%22round%22%20stroke-miterlimit%3D%2210%22%20stroke-width%3D%222%22%2F%3E%3Cpath%20d%3D%22M23%2C16L23%2C16%20%20%20c0%2C2.518-1.186%2C4.889-3.2%2C6.4L19%2C23v4h-6v-4l-0.8-0.6C10.186%2C20.889%2C9%2C18.518%2C9%2C16v0c0-3.866%2C3.134-7%2C7-7h0%20%20%20C19.866%2C9%2C23%2C12.134%2C23%2C16z%22%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20stroke-linejoin%3D%22round%22%20stroke-miterlimit%3D%2210%22%20stroke-width%3D%222%22%2F%3E%3Cline%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20stroke-linejoin%3D%22round%22%20stroke-miterlimit%3D%2210%22%20stroke-width%3D%222%22%20x1%3D%2216%22%20x2%3D%2216%22%20y1%3D%226%22%20y2%3D%222%22%2F%3E%3Cline%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20stroke-linejoin%3D%22round%22%20stroke-miterlimit%3D%2210%22%20stroke-width%3D%222%22%20x1%3D%228.93%22%20x2%3D%226.101%22%20y1%3D%228.929%22%20y2%3D%226.1%22%2F%3E%3Cline%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20stroke-linejoin%3D%22round%22%20stroke-miterlimit%3D%2210%22%20stroke-width%3D%222%22%20x1%3D%2223.07%22%20x2%3D%2225.899%22%20y1%3D%228.929%22%20y2%3D%226.1%22%2F%3E%3Cline%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20stroke-linejoin%3D%22round%22%20stroke-miterlimit%3D%2210%22%20stroke-width%3D%222%22%20x1%3D%226%22%20x2%3D%222%22%20y1%3D%2216%22%20y2%3D%2216%22%2F%3E%3Cline%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20stroke-linejoin%3D%22round%22%20stroke-miterlimit%3D%2210%22%20stroke-width%3D%222%22%20x1%3D%2226%22%20x2%3D%2230%22%20y1%3D%2216%22%20y2%3D%2216%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E);
+  background-size: 50%;
+}
+.right {
+  transform: translateX(22.5px) translateZ(-18.75px) rotateY(7.5deg); /* Increased translation and adjusted rotation */
+  background-image: url(data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20%3F%3E%3Csvg%20viewBox%3D%220%200%20512%20512%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M502.6%20182.6l-45.25-45.25C451.4%20131.4%20443.3%20128%20434.8%20128H384V80C384%2053.5%20362.5%2032%20336%2032h-160C149.5%2032%20128%2053.5%20128%2080V128H77.25c-8.5%200-16.62%203.375-22.62%209.375L9.375%20182.6C3.375%20188.6%200%20196.8%200%20205.3V304h128v-32C128%20263.1%20135.1%20256%20144%20256h32C184.9%20256%20192%20263.1%20192%20272v32h128v-32C320%20263.1%20327.1%20256%20336%20256h32C376.9%20256%20384%20263.1%20384%20272v32h128V205.3C512%20196.8%20508.6%20188.6%20502.6%20182.6zM336%20128h-160V80h160V128zM384%20368c0%208.875-7.125%2016-16%2016h-32c-8.875%200-16-7.125-16-16v-32H192v32C192%20376.9%20184.9%20384%20176%20384h-32C135.1%20384%20128%20376.9%20128%20368v-32H0V448c0%2017.62%2014.38%2032%2032%2032h448c17.62%200%2032-14.38%2032-32v-112h-128V368z%22%2F%3E%3C%2Fsvg%3E);
+  background-size: 50%;
+}
+.righter {
+  transform: translateX(45px) translateZ(-37.5px) rotateY(15deg); /* Increased translation and adjusted rotation */
+  background-image: url(data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20%3F%3E%3Csvg%20id%3D%22Layer_1_1_%22%20style%3D%22enable-background%3Anew%200%200%2016%2016%3B%22%20version%3D%221.1%22%20viewBox%3D%220%200%2016%2016%22%20xml%3Aspace%3D%22preserve%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cpolygon%20points%3D%220%2C5%208%2C9%2015%2C5.5%2015%2C14%2016%2C14%2016%2C5%208%2C1%20%22%2F%3E%3Cpolygon%20points%3D%223%2C7.059%203%2C11.5%208%2C14%2013%2C11.5%2013%2C7.059%208%2C9.559%20%22%2F%3E%3C%2Fsvg%3E);
+  background-size: 50%;
+}
+.explainer {
+  font-weight: 300;
+  font-size: 1rem; /* Increased font-size */
+  color: #ff004d;
+  transition: all 0.3s ease;
+  width: 101%; /* Increased width */
+  height: 101%; /* Increased height */
+  background: radial-gradient(#fceabb, #f8b500);
+  background-repeat: no-repeat;
+  border-radius: 15px; /* Increased border-radius */
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.8); /* Increased text-shadow */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.explainer span {
+  font-size: 0.8rem; /* Increased font-size */
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.8); /* Increased text-shadow */
+  display: inline-block; /* Center the span */
+  text-align: center; /* Center the span */
+}
+
+.ref {
+  background-color: #000;
+  background-image: linear-gradient(to bottom, #d80, #c00);
+  border-radius: 9px; /* Increased border-radius */
+  padding: 10.5px 15px; /* Increased padding */
+  position: absolute;
+  font-size: 24px; /* Increased font-size */
+  bottom: 15px; /* Increased bottom position */
+  right: 15px; /* Increased right position */
+  color: #fff;
+  text-decoration: none;
+  text-shadow: 0 0 4.5px rgba(0, 0, 0, 0.4); /* Increased text-shadow */
+  &::first-letter {
+    font-size: 18px; /* Increased font-size */
+  }
+}
+
+#galaxy-1 {
+  background-image: url("/milky_way.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  padding-top: 20px;
 }
 
 .mainComponent {
@@ -38,18 +151,27 @@ header nav {
   flex-direction: column; /* stacks the children vertically */
   justify-content: center; /* centers the children vertically */
   align-items: center; /* centers the children horizontally */
-  height: 100%;
+  height: 80%;
 }
 
 .image div {
   border-radius: 50%; /* makes the div circular */
   border: 5px solid white; /* adds a thick white border */
   overflow: hidden; /* hides the parts of the image that fall outside the circular div */
-  width: 200px; /* makes the div smaller */
-  height: 200px; /* makes the div smaller */
+  width: 100px; /* makes the div smaller */
+  height: 100px; /* makes the div smaller */
 }
 
 .image img {
-  width: 100%; /* makes the image fill the div */
+  width: 150%; /* makes the image fill the div */
   height: fit-content; /* maintains the image's aspect ratio */
+  transform: translateX(-20px); /* move the image 20 pixels to the right */
+}
+
+#introduction {
+  background-color: #f3f8ff;
+  color: black;
+  padding: 15px;
+  border-radius: 25px;
+  width: 50%;
 }

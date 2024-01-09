@@ -6,7 +6,10 @@ function App() {
   return (
     <div>
       <Header />
-      <Home />
+      <div id="galaxy-1">
+        <Home />
+      </div>
+      <div id="galaxy-2"></div>
     </div>
   );
 }
