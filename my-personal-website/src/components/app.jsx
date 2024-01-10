@@ -1,15 +1,14 @@
 import React from "react";
 import Header from "./header";
 import Home from "./home";
+import About from "./about";
 
 function App() {
   return (
     <div>
       <Header />
-      <div id="galaxy-1">
-        <Home />
-      </div>
-      <div id="galaxy-2"></div>
+      <Home />
+      <About />
     </div>
   );
 }
