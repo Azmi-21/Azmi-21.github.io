@@ -2,9 +2,9 @@ body {
   margin: 0;
   padding: 0;
   height: 100vh;
-  background-image: url("/milky_way.jpg");
+  background-image: url("/space_bg.jpg");
   background-size: cover;
-  background-repeat: no-repeat;
+
   height: 100vh;
   padding-top: 20px;
 }
@@ -58,7 +58,6 @@ header {
   transform-style: preserve-3d;
   border-radius: 15px; /* Increased border-radius */
   border: 3px solid #fff; /* Increased border thickness */
-  box-shadow: 0 0 30px 7.5px rgba(100, 100, 255, 0.4); /* Increased box-shadow */
   opacity: 0;
   transition: all 0.15s ease;
   transition-delay: 0.75s; /* Increased transition delay */
@@ -71,7 +70,7 @@ header {
   background-blend-mode: color-burn;
 
   &:hover {
-    box-shadow: 0 0 45px 15px rgba(100, 100, 255, 0.6); /* Increased box-shadow */
+    box-shadow: 0 0 15px 15px rgba(100, 100, 255, 0.6); /* Increased box-shadow */
     background-color: #ccf;
   }
 }
@@ -98,8 +97,12 @@ header {
 }
 .righter {
   transform: translateX(45px) translateZ(-37.5px) rotateY(15deg); /* Increased translation and adjusted rotation */
-  background-image: url("data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20%3F%3E%3Csvg%20id%3D%22Layer_1_1_%22%20style%3D%22enable-background%3Anew%200%200%2016%2016%3B%22%20version%3D%221.1%22%20viewBox%3D%220%200%2016%2016%22%20xml%3Aspace%3D%22preserve%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cpolygon%20points%3D%220%2C5%208%2C9%2015%2C5.5%2015%2C14%2016%2C14%2016%2C5%208%2C1%20%22%2F%3E%3Cpolygon%20points%3D%223%2C7.059%203%2C11.5%208%2C14%2013%2C11.5%2013%2C7.059%208%2C9.559%20%22%2F%3E%3C%2Fsvg%3E");
+  background-image: url("data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20%3F%3E%3Csvg%20height%3D%2248%22%20viewBox%3D%220%200%2048%2048%22%20width%3D%2248%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cdefs%3E%3Cpath%20d%3D%22M0%200h48v48H0z%22%20id%3D%22a%22%2F%3E%3C%2Fdefs%3E%3CclipPath%20id%3D%22b%22%3E%3Cuse%20overflow%3D%22visible%22%20xlink%3Ahref%3D%22%23a%22%2F%3E%3C%2FclipPath%3E%3Cpath%20clip-path%3D%22url(%23b)%22%20d%3D%22M46%2011v29c0%204.4-3.6%208-8%208H23.4c-2.16%200-4.2-.86-5.7-2.38L2%2029.66s2.52-2.46%202.6-2.5c.44-.38.98-.58%201.58-.58.44%200%20.84.12%201.2.32.08.02%208.62%204.92%208.62%204.92V8c0-1.66%201.34-3%203-3s3%201.34%203%203v14h2V3c0-1.66%201.34-3%203-3s3%201.34%203%203v19h2V5c0-1.66%201.34-3%203-3s3%201.34%203%203v17h2V11c0-1.66%201.34-3%203-3s3%201.34%203%203z%22%2F%3E%3C%2Fsvg%3E");
   background-size: 50%;
+  &:hover {
+    box-shadow: 0 0 15px 15px rgba(255, 100, 100, 0.6); /* Increased box-shadow with red color */
+    background-color: #fcc; /* Red background color */
+  }
 }
 .explainer {
   font-weight: 300;
@@ -179,45 +182,32 @@ header {
     Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
     Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   text-align: center;
+  line-height: 1.5;
 }
 
 .buttonsContainer {
   display: flex;
-  justify-content: space-evenly;
-  width: 30%;
-  margin-top: 5vh;
+  justify-content: space-around;
+  margin-top: 20px;
 }
 
 .button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 50px; /* Adjust the width to your preference */
-  height: 50px; /* Adjust the height to your preference */
-  background: linear-gradient(to right, #ff6b6b, #ffb6b9); /* Pink gradient */
+  width: 40px;
+  height: 40px;
+  background-size: cover;
+  background-repeat: no-repeat;
   border: none;
-  border-radius: 50%; /* Make it circular */
-  color: white;
-  font-size: 16px; /* Adjust the font size of the icon */
-  text-decoration: none;
   cursor: pointer;
-  transition: background 0.3s ease-in-out;
-}
-
-.button:hover {
-  background: linear-gradient(
-    to right,
-    #ff8e8e,
-    #ffc2c3
-  ); /* Darker pink gradient on hover */
 }
 
 #gitHub {
   background-image: url("data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20%3F%3E%3Csvg%20id%3D%22Layer_1_1_%22%20style%3D%22enable-background%3Anew%200%200%2016%2016%3B%22%20version%3D%221.1%22%20viewBox%3D%220%200%2016%2016%22%20xml%3Aspace%3D%22preserve%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cpolygon%20points%3D%220%2C5%208%2C9%2015%2C5.5%2015%2C14%2016%2C14%2016%2C5%208%2C1%20%22%2F%3E%3Cpolygon%20points%3D%223%2C7.059%203%2C11.5%208%2C14%2013%2C11.5%2013%2C7.059%208%2C9.559%20%22%2F%3E%3C%2Fsvg%3E");
 }
+
 #Linkedin {
   background-image: url("data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20%3F%3E%3C!DOCTYPE%20svg%20%20PUBLIC%20'-%2F%2FW3C%2F%2FDTD%20SVG%201.1%2F%2FEN'%20%20'http%3A%2F%2Fwww.w3.org%2FGraphics%2FSVG%2F1.1%2FDTD%2Fsvg11.dtd'%3E%3Csvg%20enable-background%3D%22new%200%200%2056.693%2056.693%22%20height%3D%2256.693px%22%20id%3D%22Layer_1%22%20version%3D%221.1%22%20viewBox%3D%220%200%2056.693%2056.693%22%20width%3D%2256.693px%22%20xml%3Aspace%3D%22preserve%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cg%3E%3Cpath%20d%3D%22M30.071%2C27.101v-0.077c-0.016%2C0.026-0.033%2C0.052-0.05%2C0.077H30.071z%22%2F%3E%3Cpath%20d%3D%22M49.265%2C4.667H7.145c-2.016%2C0-3.651%2C1.596-3.651%2C3.563v42.613c0%2C1.966%2C1.635%2C3.562%2C3.651%2C3.562h42.12%20%20%20c2.019%2C0%2C3.654-1.597%2C3.654-3.562V8.23C52.919%2C6.262%2C51.283%2C4.667%2C49.265%2C4.667z%20M18.475%2C46.304h-7.465V23.845h7.465V46.304z%20%20%20%20M14.743%2C20.777h-0.05c-2.504%2C0-4.124-1.725-4.124-3.88c0-2.203%2C1.67-3.88%2C4.223-3.88c2.554%2C0%2C4.125%2C1.677%2C4.175%2C3.88%20%20%20C18.967%2C19.052%2C17.345%2C20.777%2C14.743%2C20.777z%20M45.394%2C46.304h-7.465V34.286c0-3.018-1.08-5.078-3.781-5.078%20%20%20c-2.062%2C0-3.29%2C1.389-3.831%2C2.731c-0.197%2C0.479-0.245%2C1.149-0.245%2C1.821v12.543h-7.465c0%2C0%2C0.098-20.354%2C0-22.459h7.465v3.179%20%20%20c0.992-1.53%2C2.766-3.709%2C6.729-3.709c4.911%2C0%2C8.594%2C3.211%2C8.594%2C10.11V46.304z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
 }
+
 #mail {
   background-image: url("data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20%3F%3E%3Csvg%20viewBox%3D%220%200%2096%2096%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Ctitle%2F%3E%3Cpath%20d%3D%22M90%2C12H6a5.9966%2C5.9966%2C0%2C0%2C0-6%2C6V78a5.9966%2C5.9966%2C0%2C0%2C0%2C6%2C6H90a5.9966%2C5.9966%2C0%2C0%2C0%2C6-6V18A5.9966%2C5.9966%2C0%2C0%2C0%2C90%2C12ZM84%2C24v2.5188L48%2C47.0918%2C12%2C26.5188V24ZM12%2C72V40.3381L45.0234%2C59.209a5.9961%2C5.9961%2C0%2C0%2C0%2C5.9532%2C0L84%2C40.3381V72Z%22%2F%3E%3C%2Fsvg%3E");
 }
