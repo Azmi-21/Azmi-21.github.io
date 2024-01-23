@@ -4,11 +4,11 @@ function ProjectsCards(props) {
   return (
     <div className="card">
       <div className="cardDescription">
-        <h1>{title}</h1>
-        <p>{description}</p>
-        <p>{technologies}</p>
+        <h4>{props.title}</h4>
+        <p>{props.description}</p>
+        <span>{props.technologies}</span>
       </div>
-      <div className="cardPrev"></div>
+      <div className="cardPreview">{props.img}</div>
     </div>
   );
 }

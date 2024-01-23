@@ -211,3 +211,39 @@ header {
 #mail {
   background-image: url("data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20%3F%3E%3Csvg%20viewBox%3D%220%200%2096%2096%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Ctitle%2F%3E%3Cpath%20d%3D%22M90%2C12H6a5.9966%2C5.9966%2C0%2C0%2C0-6%2C6V78a5.9966%2C5.9966%2C0%2C0%2C0%2C6%2C6H90a5.9966%2C5.9966%2C0%2C0%2C0%2C6-6V18A5.9966%2C5.9966%2C0%2C0%2C0%2C90%2C12ZM84%2C24v2.5188L48%2C47.0918%2C12%2C26.5188V24ZM12%2C72V40.3381L45.0234%2C59.209a5.9961%2C5.9961%2C0%2C0%2C0%2C5.9532%2C0L84%2C40.3381V72Z%22%2F%3E%3C%2Fsvg%3E");
 }
+
+.card {
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 16px;
+}
+
+.cardDescription {
+  flex: 1;
+  padding: 16px;
+}
+
+.cardPreview {
+  flex: 1;
+  background-color: #f4f4f4;
+  max-width: 200px; /* Set a maximum width for the image */
+  overflow: hidden;
+  position: relative;
+}
+
+.cardPreview img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.cardDescription h4 {
+  margin-top: 0;
+}
+
+.cardDescription p {
+  font-size: 1rem;
+}
